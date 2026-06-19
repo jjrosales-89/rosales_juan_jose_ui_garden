@@ -1,0 +1,12 @@
+node_modules
+build
+coverage
+.git
+.gitignore
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+npm-debug.log
+storybook-static

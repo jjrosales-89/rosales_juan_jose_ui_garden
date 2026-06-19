@@ -1,46 +1,249 @@
-# Getting Started with Create React App
+# Coding Assignment 12 - React Storybook Component Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+This project is a React component library built with Create React App, Storybook, TypeScript, and Styled Components.
 
-In the project directory, you can run:
+The component library includes reusable UI components that can be viewed and tested in Storybook. Storybook is used to display each component, test different props through controls, and show default and disabled states.
 
-### `npm start`
+The project can be run locally with npm or inside Docker. The Docker version runs on:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```text
+http://localhost:8083
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+or:
 
-### `npm test`
+```text
+http://127.0.0.1:8083
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
 
-### `npm run build`
+To run this project, you need:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Docker Desktop
+* Node.js and npm
+* Terminal or PowerShell
+* Web browser
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Create React App
+* React
+* TypeScript
+* Storybook
+* Styled Components
+* Jest and React Testing Library
+* Docker
 
-### `npm run eject`
+## Components Included
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The component library includes the following required components:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Button
+* Label
+* Text
+* Table
+* TableHeader
+* TableRow
+* TableCell
+* TableFooter
+* Dropdown
+* RadioButton
+* Img
+* HeroImage
+* Card
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Component Folder Structure
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Each component is organized in its own folder inside:
 
-## Learn More
+```text
+src/components
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Each component folder includes files such as:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```text
+ComponentName.tsx
+ComponentName.stories.tsx
+ComponentName.types.tsx
+ComponentName.tests.tsx
+index.ts
+```
+
+The story files are used by Storybook.
+
+The test files are used by Jest and React Testing Library.
+
+The type files define the TypeScript props for each component.
+
+## Install Dependencies
+
+From the project folder, run:
+
+```bash
+npm install
+```
+
+This installs the required npm packages for React, Storybook, Styled Components, and testing.
+
+## Run Storybook Locally
+
+To run Storybook locally, use:
+
+```bash
+npm run storybook
+```
+
+Storybook will run at:
+
+```text
+http://localhost:6006
+```
+
+This lets you view the component library outside of Docker.
+
+## Run Tests
+
+To run the component tests, use:
+
+```bash
+npm test -- --watchAll=false
+```
+
+Expected test result:
+
+```text
+Test Suites: 2 passed, 2 total
+Tests: 27 passed, 27 total
+```
+
+The tests confirm that the components render correctly and that required states, such as disabled states, work as expected.
+
+## Docker Image Name
+
+```bash
+rosales_juan_jose_ui_garden
+```
+
+## Docker Container Name
+
+```bash
+rosales_juan_jose_coding_assignment12
+```
+
+## Workdir Inside Container
+
+```bash
+/rosales_juan_jose_ui_garden
+```
+
+## Build the Docker Image
+
+From the project folder, run:
+
+```bash
+docker build -t rosales_juan_jose_ui_garden .
+```
+
+This command builds a Docker image for the React Storybook component library.
+
+## Run the Docker Container
+
+Run the container with:
+
+```bash
+docker run -p 8083:6006 --name rosales_juan_jose_coding_assignment12 rosales_juan_jose_ui_garden
+```
+
+This maps port `6006` inside the container to port `8083` on the computer.
+
+## Open the Site
+
+Open the following URL in your browser:
+
+```text
+http://localhost:8083
+```
+
+or:
+
+```text
+http://127.0.0.1:8083
+```
+
+The Storybook component library should open in the browser.
+
+## Stop the Container
+
+In the terminal where the container is running, press:
+
+```text
+Ctrl + C
+```
+
+## If the Container Name Already Exists
+
+If Docker says the container name is already in use, remove the old container first:
+
+```bash
+docker rm -f rosales_juan_jose_coding_assignment12
+```
+
+Then run the container again:
+
+```bash
+docker run -p 8083:6006 --name rosales_juan_jose_coding_assignment12 rosales_juan_jose_ui_garden
+```
+
+## Check Existing Docker Containers
+
+To see all containers, run:
+
+```bash
+docker ps -a
+```
+
+To see only running containers, run:
+
+```bash
+docker ps
+```
+
+## Check Existing Docker Images
+
+To see Docker images, run:
+
+```bash
+docker images
+```
+
+## Notes
+
+The project includes Storybook controls so component props can be changed in the browser.
+
+Components include default and disabled states where appropriate.
+
+Disabled components visually change and use a disabled cursor style to show that they cannot be clicked.
+
+The project includes a local TypeScript declaration file:
+
+```text
+src/storybook-framework.d.ts
+```
+
+This file allows TypeScript to recognize the Storybook Webpack framework package used by the story files.
+
+## GitHub Repository
+
+GitHub repository link:
+
+```text
+PASTE_GITHUB_LINK_HERE
+```
+
+## Author
+
+Juan Jose Rosales

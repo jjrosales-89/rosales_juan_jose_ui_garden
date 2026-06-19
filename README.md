@@ -241,7 +241,7 @@ This file allows TypeScript to recognize the Storybook Webpack framework package
 GitHub repository link:
 
 ```text
-PASTE_GITHUB_LINK_HERE
+https://github.com/jjrosales-89/rosales_juan_jose_ui_garden.git
 ```
 
 ## Author

@@ -8,6 +8,10 @@ RUN npm install
 
 COPY . .
 
+RUN npm run build-storybook
+
+RUN npm install -g http-server
+
 EXPOSE 6006
 
-CMD ["npm", "run", "storybook", "--", "--host", "0.0.0.0"]
+CMD ["http-server", "storybook-static", "-p", "6006", "-a", "0.0.0.0"]

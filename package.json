@@ -55,6 +55,7 @@
     "jest-styled-components": "^7.4.0",
     "prop-types": "^15.8.1",
     "storybook": "^10.4.6",
-    "webpack": "^5.107.2"
+    "webpack": "^5.107.2",
+    "yaml": "^2.9.0"
   }
 }

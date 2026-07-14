@@ -1,9 +1,9 @@
-import { render, screen } from "@testing-library/react";
-import "jest-styled-components";
-import { TableFooter } from "./TableFooter";
+import { render, screen } from '@testing-library/react';
+import 'jest-styled-components';
+import { TableFooter } from './TableFooter';
 
 // Test 1: checks that the component is visible.
-test("renders the table footer", () => {
+test('renders the table footer', () => {
   render(
     <table>
       <tfoot>
@@ -11,14 +11,14 @@ test("renders the table footer", () => {
           <TableFooter text="Test Footer" />
         </tr>
       </tfoot>
-    </table>
+    </table>,
   );
 
-  expect(screen.getByText("Test Footer")).toBeVisible();
+  expect(screen.getByText('Test Footer')).toBeVisible();
 });
 
 // Test 2: checks that the disabled state changes the background color.
-test("changes background color when disabled", () => {
+test('changes background color when disabled', () => {
   render(
     <table>
       <tfoot>
@@ -26,11 +26,11 @@ test("changes background color when disabled", () => {
           <TableFooter text="Disabled Footer" disabled />
         </tr>
       </tfoot>
-    </table>
+    </table>,
   );
 
-  const footer = screen.getByText("Disabled Footer");
+  const footer = screen.getByText('Disabled Footer');
 
-  expect(footer).toHaveStyle("background-color: #cccccc");
-  expect(footer).toHaveStyle("cursor: not-allowed");
+  expect(footer).toHaveStyle('background-color: #cccccc');
+  expect(footer).toHaveStyle('cursor: not-allowed');
 });

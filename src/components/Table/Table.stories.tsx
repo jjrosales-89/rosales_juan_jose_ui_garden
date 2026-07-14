@@ -1,16 +1,16 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Table } from "./Table";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Table } from './Table';
 
 // Storybook configuration for the Table component.
 const meta: Meta<typeof Table> = {
-  title: "Components/Table",
+  title: 'Components/Table',
   component: Table,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 
   // Controls required by the assignment.
   argTypes: {
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
   },
 };
 
@@ -21,7 +21,7 @@ type Story = StoryObj<typeof Table>;
 // Default state.
 export const Default: Story = {
   args: {
-    backgroundColor: "#ffffff",
+    backgroundColor: '#ffffff',
     disabled: false,
   },
 };
@@ -29,7 +29,7 @@ export const Default: Story = {
 // Disabled state.
 export const Disabled: Story = {
   args: {
-    backgroundColor: "#ffffff",
+    backgroundColor: '#ffffff',
     disabled: true,
   },
 };

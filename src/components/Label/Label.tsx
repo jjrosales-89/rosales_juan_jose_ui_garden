@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { LabelProps } from "./Label.types";
+import styled from 'styled-components';
+import { LabelProps } from './Label.types';
 
 // Internal props used only for styling.
 // The $ prefix prevents these props from appearing on the real HTML label.
@@ -14,21 +14,21 @@ const StyledLabel = styled.label<StyledLabelProps>`
   border-radius: 6px;
 
   background-color: ${(props) =>
-    props.$disabled ? "#cccccc" : props.$backgroundColor || "#e5e7eb"};
+    props.$disabled ? '#cccccc' : props.$backgroundColor || '#e5e7eb'};
 
-  color: ${(props) => (props.$disabled ? "#666666" : "#111827")};
+  color: ${(props) => (props.$disabled ? '#666666' : '#111827')};
   font-size: 1rem;
   font-weight: 600;
 
-  cursor: ${(props) => (props.$disabled ? "not-allowed" : "default")};
+  cursor: ${(props) => (props.$disabled ? 'not-allowed' : 'default')};
   max-width: 100%;
 `;
 
 // Main Label component.
 export function Label({
-  text = "Label",
+  text = 'Label',
   htmlFor,
-  backgroundColor = "#e5e7eb",
+  backgroundColor = '#e5e7eb',
   disabled = false,
 }: LabelProps) {
   return (

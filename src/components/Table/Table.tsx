@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { TableProps } from "./Table.types";
+import styled from 'styled-components';
+import { TableProps } from './Table.types';
 
 // Internal props used only for styling.
 interface StyledTableProps {
@@ -13,9 +13,9 @@ const TableWrapper = styled.div<StyledTableProps>`
   border-radius: 8px;
 
   background-color: ${(props) =>
-    props.$disabled ? "#cccccc" : props.$backgroundColor || "#ffffff"};
+    props.$disabled ? '#cccccc' : props.$backgroundColor || '#ffffff'};
 
-  cursor: ${(props) => (props.$disabled ? "not-allowed" : "default")};
+  cursor: ${(props) => (props.$disabled ? 'not-allowed' : 'default')};
   opacity: ${(props) => (props.$disabled ? 0.7 : 1)};
 `;
 
@@ -40,7 +40,7 @@ const StyledTd = styled.td`
 
 // Main Table component with sample data.
 export function Table({
-  backgroundColor = "#ffffff",
+  backgroundColor = '#ffffff',
   disabled = false,
 }: TableProps) {
   return (

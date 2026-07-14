@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { HeroImageProps } from "./HeroImage.types";
+import styled from 'styled-components';
+import { HeroImageProps } from './HeroImage.types';
 
 // Internal props used only for styling.
 interface HeroWrapperProps {
@@ -17,16 +17,18 @@ const HeroWrapper = styled.section<HeroWrapperProps>`
   align-items: center;
 
   background-color: ${(props) =>
-    props.$disabled ? "#cccccc" : props.$backgroundColor || "#111827"};
+    props.$disabled ? '#cccccc' : props.$backgroundColor || '#111827'};
 
   background-image: ${(props) =>
-    props.$disabled ? "none" : `linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(${props.$imageUrl})`};
+    props.$disabled
+      ? 'none'
+      : `linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(${props.$imageUrl})`};
 
   background-size: cover;
   background-position: center;
 
   color: white;
-  cursor: ${(props) => (props.$disabled ? "not-allowed" : "default")};
+  cursor: ${(props) => (props.$disabled ? 'not-allowed' : 'default')};
   opacity: ${(props) => (props.$disabled ? 0.7 : 1)};
 `;
 
@@ -47,10 +49,10 @@ const HeroSubtitle = styled.p`
 
 // Main HeroImage component.
 export function HeroImage({
-  title = "Hero Image",
-  subtitle = "This is a responsive hero image component.",
-  imageUrl = "https://via.placeholder.com/1200x500",
-  backgroundColor = "#111827",
+  title = 'Hero Image',
+  subtitle = 'This is a responsive hero image component.',
+  imageUrl = 'https://via.placeholder.com/1200x500',
+  backgroundColor = '#111827',
   disabled = false,
 }: HeroImageProps) {
   return (

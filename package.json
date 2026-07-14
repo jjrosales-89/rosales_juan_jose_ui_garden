@@ -24,7 +24,13 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint src .storybook --ext .js,.jsx,.ts,.tsx --max-warnings=0",
+    "test:ci": "react-scripts test --watchAll=false",
+    "quality": "npm run format:check && npm run lint && npm run test:ci",
+    "prepare": "husky"
   },
   "eslintConfig": {
     "extends": [
@@ -52,7 +58,9 @@
     "@storybook/react-webpack5": "^10.4.6",
     "@types/styled-components": "^5.1.36",
     "eslint-plugin-storybook": "^10.4.6",
+    "husky": "^9.1.7",
     "jest-styled-components": "^7.4.0",
+    "prettier": "3.9.5",
     "prop-types": "^15.8.1",
     "storybook": "^10.4.6",
     "webpack": "^5.107.2",

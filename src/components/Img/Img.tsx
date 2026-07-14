@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { ImgProps } from "./Img.types";
+import styled from 'styled-components';
+import { ImgProps } from './Img.types';
 
 // Internal props used only for styling.
 interface ImageWrapperProps {
@@ -13,9 +13,9 @@ const ImageWrapper = styled.div<ImageWrapperProps>`
   border-radius: 8px;
 
   background-color: ${(props) =>
-    props.$disabled ? "#cccccc" : props.$backgroundColor || "#ffffff"};
+    props.$disabled ? '#cccccc' : props.$backgroundColor || '#ffffff'};
 
-  cursor: ${(props) => (props.$disabled ? "not-allowed" : "default")};
+  cursor: ${(props) => (props.$disabled ? 'not-allowed' : 'default')};
   opacity: ${(props) => (props.$disabled ? 0.7 : 1)};
   max-width: 100%;
 `;
@@ -30,9 +30,9 @@ const StyledImg = styled.img`
 
 // Main Img component.
 export function Img({
-  src = "https://via.placeholder.com/320x180",
-  alt = "Sample image",
-  backgroundColor = "#ffffff",
+  src = 'https://via.placeholder.com/320x180',
+  alt = 'Sample image',
+  backgroundColor = '#ffffff',
   disabled = false,
 }: ImgProps) {
   return (

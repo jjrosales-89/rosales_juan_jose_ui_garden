@@ -1,17 +1,17 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Dropdown } from "./Dropdown";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Dropdown } from './Dropdown';
 
 // Storybook configuration for the Dropdown component.
 const meta: Meta<typeof Dropdown> = {
-  title: "Components/Dropdown",
+  title: 'Components/Dropdown',
   component: Dropdown,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 
   // Controls required by the assignment.
   argTypes: {
-    label: { control: "text" },
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    label: { control: 'text' },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
   },
 };
 
@@ -22,9 +22,9 @@ type Story = StoryObj<typeof Dropdown>;
 // Default state.
 export const Default: Story = {
   args: {
-    label: "Select a course",
-    options: ["React", "Storybook", "Docker"],
-    backgroundColor: "#ffffff",
+    label: 'Select a course',
+    options: ['React', 'Storybook', 'Docker'],
+    backgroundColor: '#ffffff',
     disabled: false,
   },
 };
@@ -32,9 +32,9 @@ export const Default: Story = {
 // Disabled state.
 export const Disabled: Story = {
   args: {
-    label: "Disabled dropdown",
-    options: ["React", "Storybook", "Docker"],
-    backgroundColor: "#ffffff",
+    label: 'Disabled dropdown',
+    options: ['React', 'Storybook', 'Docker'],
+    backgroundColor: '#ffffff',
     disabled: true,
   },
 };

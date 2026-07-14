@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { TextProps } from "./Text.types";
+import styled from 'styled-components';
+import { TextProps } from './Text.types';
 
 // Internal props used only for styling.
 interface StyledTextProps {
@@ -14,20 +14,20 @@ const StyledText = styled.p<StyledTextProps>`
   margin: 0;
 
   background-color: ${(props) =>
-    props.$disabled ? "#cccccc" : props.$backgroundColor || "#ffffff"};
+    props.$disabled ? '#cccccc' : props.$backgroundColor || '#ffffff'};
 
-  color: ${(props) => (props.$disabled ? "#666666" : "#111827")};
+  color: ${(props) => (props.$disabled ? '#666666' : '#111827')};
   font-size: 1rem;
   line-height: 1.5;
 
-  cursor: ${(props) => (props.$disabled ? "not-allowed" : "default")};
+  cursor: ${(props) => (props.$disabled ? 'not-allowed' : 'default')};
   max-width: 100%;
 `;
 
 // Main Text component.
 export function Text({
-  text = "Sample text",
-  backgroundColor = "#ffffff",
+  text = 'Sample text',
+  backgroundColor = '#ffffff',
   disabled = false,
 }: TextProps) {
   return (

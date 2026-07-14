@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { CardProps } from "./Card.types";
+import styled from 'styled-components';
+import { CardProps } from './Card.types';
 
 // Internal props used only for styling.
 interface StyledCardProps {
@@ -14,13 +14,13 @@ const StyledCard = styled.article<StyledCardProps>`
   border-radius: 12px;
   border: 1px solid #d1d5db;
   box-shadow: ${(props) =>
-    props.$disabled ? "none" : "0 4px 12px rgba(0, 0, 0, 0.08)"};
+    props.$disabled ? 'none' : '0 4px 12px rgba(0, 0, 0, 0.08)'};
 
   background-color: ${(props) =>
-    props.$disabled ? "#cccccc" : props.$backgroundColor || "#ffffff"};
+    props.$disabled ? '#cccccc' : props.$backgroundColor || '#ffffff'};
 
-  color: ${(props) => (props.$disabled ? "#666666" : "#111827")};
-  cursor: ${(props) => (props.$disabled ? "not-allowed" : "default")};
+  color: ${(props) => (props.$disabled ? '#666666' : '#111827')};
+  cursor: ${(props) => (props.$disabled ? 'not-allowed' : 'default')};
   opacity: ${(props) => (props.$disabled ? 0.7 : 1)};
 `;
 
@@ -37,9 +37,9 @@ const CardText = styled.p`
 
 // Main Card component.
 export function Card({
-  title = "Card Title",
-  text = "This is a responsive card component.",
-  backgroundColor = "#ffffff",
+  title = 'Card Title',
+  text = 'This is a responsive card component.',
+  backgroundColor = '#ffffff',
   disabled = false,
 }: CardProps) {
   return (

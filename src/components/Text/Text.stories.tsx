@@ -1,17 +1,17 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Text } from "./Text";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Text } from './Text';
 
 // Storybook configuration for the Text component.
 const meta: Meta<typeof Text> = {
-  title: "Components/Text",
+  title: 'Components/Text',
   component: Text,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 
   // Controls required by the assignment.
   argTypes: {
-    text: { control: "text" },
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    text: { control: 'text' },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
   },
 };
 
@@ -22,8 +22,8 @@ type Story = StoryObj<typeof Text>;
 // Default state.
 export const Default: Story = {
   args: {
-    text: "This is a sample text component.",
-    backgroundColor: "#ffffff",
+    text: 'This is a sample text component.',
+    backgroundColor: '#ffffff',
     disabled: false,
   },
 };
@@ -31,8 +31,8 @@ export const Default: Story = {
 // Disabled state.
 export const Disabled: Story = {
   args: {
-    text: "This text is disabled.",
-    backgroundColor: "#ffffff",
+    text: 'This text is disabled.',
+    backgroundColor: '#ffffff',
     disabled: true,
   },
 };

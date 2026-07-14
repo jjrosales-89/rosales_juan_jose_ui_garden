@@ -1,18 +1,18 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Img } from "./Img";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Img } from './Img';
 
 // Storybook configuration for the Img component.
 const meta: Meta<typeof Img> = {
-  title: "Components/Img",
+  title: 'Components/Img',
   component: Img,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 
   // Controls required by the assignment.
   argTypes: {
-    src: { control: "text" },
-    alt: { control: "text" },
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    src: { control: 'text' },
+    alt: { control: 'text' },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
   },
 };
 
@@ -23,9 +23,9 @@ type Story = StoryObj<typeof Img>;
 // Default state.
 export const Default: Story = {
   args: {
-    src: "https://via.placeholder.com/320x180",
-    alt: "Default image",
-    backgroundColor: "#ffffff",
+    src: 'https://via.placeholder.com/320x180',
+    alt: 'Default image',
+    backgroundColor: '#ffffff',
     disabled: false,
   },
 };
@@ -33,9 +33,9 @@ export const Default: Story = {
 // Disabled state.
 export const Disabled: Story = {
   args: {
-    src: "https://via.placeholder.com/320x180",
-    alt: "Disabled image",
-    backgroundColor: "#ffffff",
+    src: 'https://via.placeholder.com/320x180',
+    alt: 'Disabled image',
+    backgroundColor: '#ffffff',
     disabled: true,
   },
 };

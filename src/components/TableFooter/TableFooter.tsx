@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { TableFooterProps } from "./TableFooter.types";
+import styled from 'styled-components';
+import { TableFooterProps } from './TableFooter.types';
 
 // Internal props used only for styling.
 interface StyledTableFooterProps {
@@ -13,16 +13,16 @@ const StyledTableFooter = styled.td<StyledTableFooterProps>`
   font-weight: 700;
 
   background-color: ${(props) =>
-    props.$disabled ? "#cccccc" : props.$backgroundColor || "#f9fafb"};
+    props.$disabled ? '#cccccc' : props.$backgroundColor || '#f9fafb'};
 
-  color: ${(props) => (props.$disabled ? "#666666" : "#111827")};
-  cursor: ${(props) => (props.$disabled ? "not-allowed" : "default")};
+  color: ${(props) => (props.$disabled ? '#666666' : '#111827')};
+  cursor: ${(props) => (props.$disabled ? 'not-allowed' : 'default')};
 `;
 
 // Main TableFooter component.
 export function TableFooter({
-  text = "Table footer",
-  backgroundColor = "#f9fafb",
+  text = 'Table footer',
+  backgroundColor = '#f9fafb',
   disabled = false,
 }: TableFooterProps) {
   return (

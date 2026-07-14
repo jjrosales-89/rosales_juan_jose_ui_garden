@@ -22,38 +22,38 @@ http://127.0.0.1:8083
 
 To run this project, you need:
 
-* Docker Desktop
-* Node.js and npm
-* Terminal or PowerShell
-* Web browser
+- Docker Desktop
+- Node.js and npm
+- Terminal or PowerShell
+- Web browser
 
 ## Technologies Used
 
-* Create React App
-* React
-* TypeScript
-* Storybook
-* Styled Components
-* Jest and React Testing Library
-* Docker
+- Create React App
+- React
+- TypeScript
+- Storybook
+- Styled Components
+- Jest and React Testing Library
+- Docker
 
 ## Components Included
 
 The component library includes the following required components:
 
-* Button
-* Label
-* Text
-* Table
-* TableHeader
-* TableRow
-* TableCell
-* TableFooter
-* Dropdown
-* RadioButton
-* Img
-* HeroImage
-* Card
+- Button
+- Label
+- Text
+- Table
+- TableHeader
+- TableRow
+- TableCell
+- TableFooter
+- Dropdown
+- RadioButton
+- Img
+- HeroImage
+- Card
 
 ## Component Folder Structure
 

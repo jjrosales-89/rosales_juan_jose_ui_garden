@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { DropdownProps } from "./Dropdown.types";
+import styled from 'styled-components';
+import { DropdownProps } from './Dropdown.types';
 
 // Internal props used only for styling.
 interface StyledSelectProps {
@@ -28,17 +28,17 @@ const StyledSelect = styled.select<StyledSelectProps>`
   width: 100%;
 
   background-color: ${(props) =>
-    props.$disabled ? "#cccccc" : props.$backgroundColor || "#ffffff"};
+    props.$disabled ? '#cccccc' : props.$backgroundColor || '#ffffff'};
 
-  color: ${(props) => (props.$disabled ? "#666666" : "#111827")};
-  cursor: ${(props) => (props.$disabled ? "not-allowed" : "pointer")};
+  color: ${(props) => (props.$disabled ? '#666666' : '#111827')};
+  cursor: ${(props) => (props.$disabled ? 'not-allowed' : 'pointer')};
 `;
 
 // Main Dropdown component.
 export function Dropdown({
-  label = "Choose an option",
-  options = ["Option 1", "Option 2", "Option 3"],
-  backgroundColor = "#ffffff",
+  label = 'Choose an option',
+  options = ['Option 1', 'Option 2', 'Option 3'],
+  backgroundColor = '#ffffff',
   disabled = false,
 }: DropdownProps) {
   return (

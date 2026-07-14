@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { TableHeaderProps } from "./TableHeader.types";
+import styled from 'styled-components';
+import { TableHeaderProps } from './TableHeader.types';
 
 // Internal props used only for styling.
 interface StyledTableHeaderProps {
@@ -14,16 +14,16 @@ const StyledTableHeader = styled.th<StyledTableHeaderProps>`
   font-weight: 700;
 
   background-color: ${(props) =>
-    props.$disabled ? "#cccccc" : props.$backgroundColor || "#f3f4f6"};
+    props.$disabled ? '#cccccc' : props.$backgroundColor || '#f3f4f6'};
 
-  color: ${(props) => (props.$disabled ? "#666666" : "#111827")};
-  cursor: ${(props) => (props.$disabled ? "not-allowed" : "default")};
+  color: ${(props) => (props.$disabled ? '#666666' : '#111827')};
+  cursor: ${(props) => (props.$disabled ? 'not-allowed' : 'default')};
 `;
 
 // Main TableHeader component.
 export function TableHeader({
-  text = "Header",
-  backgroundColor = "#f3f4f6",
+  text = 'Header',
+  backgroundColor = '#f3f4f6',
   disabled = false,
 }: TableHeaderProps) {
   return (

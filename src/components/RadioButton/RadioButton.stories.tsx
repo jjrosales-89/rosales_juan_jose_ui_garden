@@ -1,17 +1,17 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { RadioButton } from "./RadioButton";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { RadioButton } from './RadioButton';
 
 // Storybook configuration for the RadioButton component.
 const meta: Meta<typeof RadioButton> = {
-  title: "Components/RadioButton",
+  title: 'Components/RadioButton',
   component: RadioButton,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 
   // Controls required by the assignment.
   argTypes: {
-    label: { control: "text" },
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    label: { control: 'text' },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
   },
 };
 
@@ -22,8 +22,8 @@ type Story = StoryObj<typeof RadioButton>;
 // Default state.
 export const Default: Story = {
   args: {
-    label: "Default radio button",
-    backgroundColor: "#ffffff",
+    label: 'Default radio button',
+    backgroundColor: '#ffffff',
     disabled: false,
   },
 };
@@ -31,8 +31,8 @@ export const Default: Story = {
 // Disabled state.
 export const Disabled: Story = {
   args: {
-    label: "Disabled radio button",
-    backgroundColor: "#ffffff",
+    label: 'Disabled radio button',
+    backgroundColor: '#ffffff',
     disabled: true,
   },
 };

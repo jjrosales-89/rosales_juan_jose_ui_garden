@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { RadioButtonProps } from "./RadioButton.types";
+import styled from 'styled-components';
+import { RadioButtonProps } from './RadioButton.types';
 
 // Internal props used only for styling.
 interface RadioWrapperProps {
@@ -15,10 +15,10 @@ const RadioWrapper = styled.label<RadioWrapperProps>`
   border-radius: 6px;
 
   background-color: ${(props) =>
-    props.$disabled ? "#cccccc" : props.$backgroundColor || "#ffffff"};
+    props.$disabled ? '#cccccc' : props.$backgroundColor || '#ffffff'};
 
-  color: ${(props) => (props.$disabled ? "#666666" : "#111827")};
-  cursor: ${(props) => (props.$disabled ? "not-allowed" : "pointer")};
+  color: ${(props) => (props.$disabled ? '#666666' : '#111827')};
+  cursor: ${(props) => (props.$disabled ? 'not-allowed' : 'pointer')};
   max-width: 100%;
 `;
 
@@ -28,9 +28,9 @@ const StyledRadio = styled.input`
 
 // Main RadioButton component.
 export function RadioButton({
-  label = "Radio option",
-  name = "radio-group",
-  backgroundColor = "#ffffff",
+  label = 'Radio option',
+  name = 'radio-group',
+  backgroundColor = '#ffffff',
   disabled = false,
 }: RadioButtonProps) {
   return (
